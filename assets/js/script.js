@@ -11,10 +11,36 @@ function generatePassword(){
   console.log(pwLength);
 
   var upper = "ABCDEFGHIJKLMNOPQRSTUVXYZ";
-  var lowwer = "abcdefghijklmnopqrstuvxyz";
+  var lower = "abcdefghijklmnopqrstuvxyz";
   var numbers = "0123456789";
   var specials = "!@#$%&*()+?";
-  
+
+  var wantsUpper = window.confirm("Do you want upercase letters is your password?")
+  var wantsLower = window.confirm("Do you want lowercase letters in your password?")
+  var wantsNumber = window.confirm("Do you want numbers in your password?")
+  var wantsSpecial = window.confirm("Do you want special characters in your password?")
+
+    if (wantsUpper===true) {
+      possiblePw = possiblePw + upper;
+
+    }
+
+    if (wantsLower===true) {
+      possiblePw = possiblePw + lower;
+
+    }
+
+    if (wantsNumber===true) {
+      possiblePw = possiblePw + numbers;
+
+    }
+
+    if (wantsSpecial===true) {
+      possiblePw = possiblePw + specials;
+
+    }
+
+    
 
 
 
