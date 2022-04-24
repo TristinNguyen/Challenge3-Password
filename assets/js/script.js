@@ -1,13 +1,13 @@
 // Assignment code here
-var generateBtn = document.querySelector("#generate");
 
-function generatePassword(){
+function generatePassword() {
 
   var possiblePw="";
 
   var pwLength = window.prompt("How long do you want your generated password to be? (Must be between 8 and 128 characters)");
 
-  if (pwLength <8 || pwLength >128 || !Number.isInteger(Number(pwLength))) {
+  while (pwLength < 8 || pwLength > 128 || !Number.isInteger(Number(pwLength))) {
+    pwLength = window.prompt ("Password must be between 8 and 128!")
 
   }
 
@@ -46,7 +46,8 @@ function generatePassword(){
 
     var result = ""
     possiblePw = possiblePw.split('')
-    for (var i=0; i< pwLength; i++ ) {
+
+    for ( var i=0; i< pwLength; i++ ) {
       Math.floor(Math.random() * possiblePw.length);
       result
     }
