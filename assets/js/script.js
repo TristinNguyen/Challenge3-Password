@@ -1,14 +1,18 @@
 // Assignment code here
+var generateBtn = document.querySelector("#generate");
+
 function generatePassword(){
 
   var possiblePw="";
 
   var pwLength = window.prompt("How long do you want your generated password to be? (Must be between 8 and 128 characters)");
 
+  if (pwLength <8 || pwLength >128 || !Number.isInteger(Number(pwLength))) {
+
+  }
 
 
-
-  console.log(pwLength);
+  // console.log(pwLength);
 
   var upper = "ABCDEFGHIJKLMNOPQRSTUVXYZ";
   var lower = "abcdefghijklmnopqrstuvxyz";
@@ -40,9 +44,14 @@ function generatePassword(){
 
     }
 
-    
+    var result = ""
+    possiblePw = possiblePw.split('')
+    for (var i=0; i< pwLength; i++ ) {
+      Math.floor(Math.random() * possiblePw.length);
+      result
+    }
 
-
+    return possiblePw
 
 }
 
