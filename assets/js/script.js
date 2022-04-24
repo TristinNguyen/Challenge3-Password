@@ -19,7 +19,7 @@ function generatePassword() {
   var numbers = "0123456789";
   var specials = "!@#$%&*()+?";
 
-  var wantsUpper = window.confirm("Do you want upercase letters is your password?")
+  var wantsUpper = window.confirm("Do you want uppercase letters is your password?")
   var wantsLower = window.confirm("Do you want lowercase letters in your password?")
   var wantsNumber = window.confirm("Do you want numbers in your password?")
   var wantsSpecial = window.confirm("Do you want special characters in your password?")
@@ -52,8 +52,7 @@ function generatePassword() {
       result
     }
 
-    return possiblePw
-
+    return upper
 }
 
 
